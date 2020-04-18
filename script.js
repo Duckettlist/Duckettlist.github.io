@@ -6,7 +6,7 @@
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
-    alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley Duckett\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley Duckett Jr.\n\ns0375395@student.rockvalleycollege.edu \n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'Shopping List' App!\n\nCreated by Rock Valley College\n**Javascript(Web233) Students**\n\nQuestions?\nemail Professor Chuck Konkol\nc.konkol@rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     populateshoppinglistonload();
     displayShoppinglists();
     clearFocus();
@@ -323,7 +323,6 @@ function deleteShoppingCart(position) {
   displayShoppinglists();
   displayShoppingCart();
 }
-
 
 
 
