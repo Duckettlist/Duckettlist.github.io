@@ -1,8 +1,8 @@
 // Wesley Duckett
 // Spring 2020
 // Web233 Javascript
-// Date: 04/11/2020
-// Assignment#: Week 12 (Shopping List Version 4.0)
+// Date: 04/17/2020
+// Assignment#: Week 13 (Shopping List Version github)
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
