@@ -75,6 +75,7 @@ function about()
    alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     
 }
+
 //read cookie and return
 function readCookie(name) {
     var nameEQ = name + "=";
