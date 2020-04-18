@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-
-    <link rel="stylesheet" href="style.css">    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Wesley Duckett">
-    <script src="script.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <title>RVC List v4.0</title>
+    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="RVCList" content="Add to Home">
+<meta name="description" content="JS App Created by RVC Web233 Students">
+<meta name="author" content="Prof Chuck Konkol">
   </head>
-
   <body>
-
-    <div id="wrapper">
-      
-    <img src="https://i.ibb.co/jyWX0MV/jewel-osco.png" alt="jewel-osco" border="0" width="100">
-
-    
-    <h1>Shopping List App Version 4.0</h1>
-    
-    <input type="text" id= "item" name="item" />&nbsp;Name<br><br>
-    <input type="text" id="cost" name="cost" />&nbsp;Cost<br><br>
-    <input class="button" name="submit" type="button" value="+Add" onclick="addShoppinglist(item.value, cost.value)" />
-        
-    <p id="MyList"></p>
-    <p id="MyCart"></p>
+<script src="script.js"></script>
+     <div id="wrapper">
+    <h1>Shopping List</h1>
+     <label>Item</label><input type="text" id="item" name="item" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('btnSubmit').click()" maxlength="18" placeholder="enter item < 19 characters"/>
+      <input class="button" id="btnSubmit" name="submit" type="button" value="+Add" onclick="addShoppinglist(item.value)" /><br>
+  <p id="MyList"></p>
+  <p id="labels"></p>
+   <p id="MyCart"></p>   
+    <center><input class="button" id="about" name="submit" type="submit" value="about" onclick="about()" /> </center>
+    <center><p id="sharelist"></p></center>
+     <center><p id="sharebutton"></p></center>
+      <p id="footer"><b><a href="http://rvchourofcode.com" target="_blank">Join the Rock Valley College Hour of Code Family</a></b></p>   
    </div>
   </body>
 </html>
-
