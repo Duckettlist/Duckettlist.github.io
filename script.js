@@ -27,26 +27,22 @@ function get(name){
     if(num>=0) return url.substr(0,num);
     if(num<0)  return url;
 }
-//ShareList Passbyvalues Week 14
+//ShareList passbyvalues Week 14
 function passlist()
 {
- var url = "https://rvclist.github.io/index.html?list="+ shoppinglist;
- document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;   
-     
+ var url = "https://rvclist.github.io/rvclist14/index.html?list="+ shoppinglist;
+ //Week 14 add link to sharelist id
+      document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;
  //Copy URL
- copytoClipboard(url);          
- }
-
-
+      copyToClipboard(url);
+}
 //vFinal share function
 function share()
 {
    passlist();
 }
-
 //Copy URL Week 14
-  function copyToClipboard(text) 
-{
+function copyToClipboard(text) {
   var passbyurl = document.createElement("textarea");
   passbyurl.value = text;
   document.body.appendChild(passbyurl);
@@ -56,14 +52,14 @@ function share()
   document.body.removeChild(passbyurl);
   alert("URL has been copied. Ready to share: " + text);
   //window.prompt("Copy & Share List!", text);
+    
 }
 
 function about()
 {
-   alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     
 }
-
 //read cookie and return
 function readCookie(name) {
     var nameEQ = name + "=";
@@ -236,12 +232,12 @@ function clearFocus()
 }
 
 
-//Update ShoppingList Week 14
-function displayShoppinglists() 
-{
+//Update ShoppinhList Week 14
+function displayShoppinglists() {
 document.getElementById("MyList").innerHTML = '';
 var TheList = "";
 var TheRow = "";
+//Get length of arraylist
 var arrayLength = shoppinglist.length;
 for (var i = 0; i < shoppinglist.length; i++) {
   //v 3.1 change button name to btndelete
@@ -251,7 +247,7 @@ var btndelete =  ' <input class="button" id="remove" name="delete" type="button"
 var arrays = shoppinglist[i];
 arrays = "'"+arrays+"'";
 var btnaddcart =  '<input name="add" type="checkbox" id="adds" value="Add to Shopping Cart" onclick="addtoshopcart('+arrays+','+ i +')" />';
-// Share Button    
+//Week 14 Add Share Button
 var btnsharelist = '<input class="button" id="shares" name="shares" type="submit" value="Share Shopping List" onclick="share()" />';
 TheRow = '<li>' + shoppinglist[i] + btndelete + ' '  + btnaddcart + '</li>';
 TheList += TheRow;
@@ -260,14 +256,14 @@ TheList += TheRow;
 if (arrayLength > 0)
 {
   document.getElementById("MyList").innerHTML = '<ul>' + TheList + '</ul>';
-  // Add Share Button if arraylist contains values  
+//Week 14 Add Share Button if arraylist contains values 
   document.getElementById("sharebutton").innerHTML = btnsharelist;
 }else
 {
   document.getElementById("MyList").innerHTML = ' ';
-  // Remove Share Button and Sahrelist if arraylist contains values 
+//Week 14 Remove Share Button and Sharelist if arraylist contains values 
   document.getElementById("sharebutton").innerHTML = ' ';
-  document.getElementById("sharelist").innerHTML = ' ';
+    document.getElementById("sharelist").innerHTML = ' ';
 }
 }
 
