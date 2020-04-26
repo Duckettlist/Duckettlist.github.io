@@ -1,8 +1,8 @@
 // Wesley Duckett
 // Spring 2020
 // Web233 Javascript
-// Date: 04/17/2020
-// Assignment#: Week 13 (Shopping List Version github)
+// Date: 04/25/2020
+// Assignment#: Week 14 (Shopping List Version github)
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
@@ -27,47 +27,35 @@ function get(name){
     if(num>=0) return url.substr(0,num);
     if(num<0)  return url;
 }
-//v4.1 ShareList via bitly api
+//ShareList Passbyvalues Week 14
 function passlist()
 {
  var url = "https://rvclist.github.io/index.html?list="+ shoppinglist;
-    var accessToken = "eff66075988ab2f610fba18455b493ce90540381";
+ document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;   
+     
+ //Copy URL
+ copytoClipboard(url);          
+ }
 
-    var params = {
-        "long_url" : url           
-    };
 
-    $.ajax({
-        url: "https://api-ssl.bitly.com/v4/shorten",
-        cache: false,
-        dataType: "json",
-        method: "POST",
-        contentType: "application/json",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
-        },
-        data: JSON.stringify(params)
-    }).done(function(data) {
-        //alert(data.link);
-         getshorturl = 1;
-         document.getElementById("sharelist").innerHTML = 'Share List:\n' + data.link;
-         copyToClipboard(data.link);
-    }).fail(function(data) {
-        //alert(data.link);
-      document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;
-      //copyToClipboard("sharelist");
-      copyToClipboard(url);
-      //alert("ShoppingList URL Copied");
-    });
-}
 //vFinal share function
 function share()
 {
    passlist();
 }
-//v4.1 prompt message to copy URL
-function copyToClipboard(text) {
-   window.prompt("Copy & Share List!", text);
+
+//Copy URL Week 14
+  function copyToClipboard(text) 
+{
+  var passbyurl = document.createElement("textarea");
+  passbyurl.value = text;
+  document.body.appendChild(passbyurl);
+  passbyurl.focus();
+  passbyurl.select();
+  document.execCommand("copy");
+  document.body.removeChild(passbyurl);
+  alert("URL has been copied. Ready to share: " + text);
+  //window.prompt("Copy & Share List!", text);
 }
 
 function about()
@@ -248,8 +236,9 @@ function clearFocus()
 }
 
 
-//v 3.1: update function displayShoppinglists() to add to cart 
-function displayShoppinglists() {
+//Update ShoppingList Week 14
+function displayShoppinglists() 
+{
 document.getElementById("MyList").innerHTML = '';
 var TheList = "";
 var TheRow = "";
@@ -257,11 +246,12 @@ var arrayLength = shoppinglist.length;
 for (var i = 0; i < shoppinglist.length; i++) {
   //v 3.1 change button name to btndelete
 var btndelete =  ' <input class="button" id="remove" name="delete" type="button" value="Remove" onclick="deleteShoppinglists(' + i + ')" />';
-var btnupdate =  ' <input class="button" name="edit" type="button" value="Edit Item" onclick="changeShoppinglist(' + i + ')" />';
+//var btnupdate =  ' <input class="button" name="edit" type="button" value="Edit Item" onclick="changeShoppinglist(' + i + ')" />';
 //v 3.1 add edit button using below i index & name it btnpdate
 var arrays = shoppinglist[i];
 arrays = "'"+arrays+"'";
 var btnaddcart =  '<input name="add" type="checkbox" id="adds" value="Add to Shopping Cart" onclick="addtoshopcart('+arrays+','+ i +')" />';
+// Share Button    
 var btnsharelist = '<input class="button" id="shares" name="shares" type="submit" value="Share Shopping List" onclick="share()" />';
 TheRow = '<li>' + shoppinglist[i] + btndelete + ' '  + btnaddcart + '</li>';
 TheList += TheRow;
@@ -270,12 +260,14 @@ TheList += TheRow;
 if (arrayLength > 0)
 {
   document.getElementById("MyList").innerHTML = '<ul>' + TheList + '</ul>';
+  // Add Share Button if arraylist contains values  
   document.getElementById("sharebutton").innerHTML = btnsharelist;
 }else
 {
   document.getElementById("MyList").innerHTML = ' ';
+  // Remove Share Button and Sahrelist if arraylist contains values 
   document.getElementById("sharebutton").innerHTML = ' ';
-    document.getElementById("sharelist").innerHTML = ' ';
+  document.getElementById("sharelist").innerHTML = ' ';
 }
 }
 
