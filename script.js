@@ -30,7 +30,7 @@ function get(name){
 //ShareList passbyvalues Week 14
 function passlist()
 {
- var url = "https://rvclist.github.io/rvclist14/index.html?list="+ shoppinglist;
+ var url = "https://duckettlist.github.io/index.html?list="+ shoppinglist;
  //Week 14 add link to sharelist id
       document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;
  //Copy URL
