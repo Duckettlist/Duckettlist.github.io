@@ -16,7 +16,8 @@ window.onload = function() {
 //v 4.0 read cookie on load and display
 
 //v4.1 get values via URL
-function get(name){
+function get(name)
+{
     var url = window.location.search;
     var num = url.search(name);
     var namel = name.length;
@@ -26,7 +27,8 @@ function get(name){
     num = url.search("&");
     if(num>=0) return url.substr(0,num);
     if(num<0)  return url;
-}
+} // end "Get" Function
+
 //ShareList passbyvalues Week 14
 function passlist()
 {
@@ -35,7 +37,8 @@ function passlist()
       document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;
  //Copy URL
       copyToClipboard(url);
-}
+} // End "passlist" function
+
 //vFinal share function
 function share()
 {
