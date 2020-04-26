@@ -97,14 +97,16 @@ ul {
     clear:both;
 }
 li {
-    background: #ccc;
+    background: #9BF495;
+    /*background: #ccc;*/
     margin:5px 0px;
     line-height:1.6;
     padding:10px;
     border:#222 solid 1px;
 }
 li:nth-child(odd) {
-    background: #ccc;
+    background: #9BF495;
+   /* background: #ccc;*/
 }
 li a {
     font-size:small;
