@@ -35,6 +35,10 @@ function passlist()
  var url = "https://duckettlist.github.io/index.html?list="+ shoppinglist;
  //Week 14 add link to sharelist id
       document.getElementById("sharelist").innerHTML = 'Share List:\n' + url;
+    
+   var accessToken = "a04a6abaaf9bf36ed216a2df313c0b0f2ccd91b9";
+    
+    
  //Copy URL
       copyToClipboard(url);
 } // End "passlist" function
