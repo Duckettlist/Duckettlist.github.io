@@ -1,12 +1,12 @@
 // Wesley Duckett
 // Spring 2020
 // Web233 Javascript
-// Date: 04/25/2020
-// Assignment#: Week 14 (Shopping List Version github)
+// Date: 05/01/2020
+// Assignment#: Week 15 (Clearn-Up Version github)
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
-    alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'AKAM Handy Works' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     populateshoppinglistonload();
     displayShoppinglists();
     clearFocus();
@@ -83,7 +83,7 @@ function copyToClipboard(text) {
 
 function about()
 {
-    alert("Welcome to 'Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+    alert("Welcome to 'AKAM Handy Works' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
     
 }
 //read cookie and return
@@ -118,11 +118,11 @@ function remove_unwanted(str) {
 //v 4.0 save cookie
 function savecookie()
 {
-  delete_cookie('konkollist');
+  delete_cookie('duckettlist');
    var date = new Date();
    //keeps for a year
     date.setTime(date.getTime() + Number(365) * 3600 * 1000);
-   document.cookie = 'konkollist' + "=" + escape(shoppinglist.join(',')) + "; path=/;expires = " + date.toGMTString();
+   document.cookie = 'duckettlist' + "=" + escape(shoppinglist.join(',')) + "; path=/;expires = " + date.toGMTString();
 }
 
 
@@ -137,7 +137,7 @@ function populateshoppinglistonload()
   shoppinglist = [];
   addtocart = [];
   //load cookie into array
-  var y = readCookie('konkollist');
+  var y = readCookie('duckettlist');
   //remove unwanted chars and format
   y = remove_unwanted(y); 
   //spit array by comma %2C
