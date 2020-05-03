@@ -2,7 +2,7 @@
 // Spring 2020
 // Web233 Javascript
 // Date: 05/01/2020
-// Assignment#: Week 15 (Clearn-Up Version github)
+// Assignment#: Week 15 (Clean-Up Version github)
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
