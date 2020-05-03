@@ -83,7 +83,7 @@ function copyToClipboard(text) {
 
 function about()
 {
-    alert("Welcome to 'AKAM Handy Works' App!\n\nCreated by Wesley K Duckett Jr.\n**Javascript(Web233) Students**\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu\n\nRegister @ RockValleyCollege.edu");
+   alert("Welcome to 'Home Improvement Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n** Home Repair List **\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu");
     
 }
 //read cookie and return
