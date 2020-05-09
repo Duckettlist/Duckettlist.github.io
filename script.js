@@ -2,7 +2,7 @@
 // Spring 2020
 // Web233 Javascript
 // Date: 05/01/2020
-// Assignment#: Week 16 Version 4.1 (Clean-Up Version github)
+// Assignment#: Week 16 Version 4.1 (Final Shopping Cart App)
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
