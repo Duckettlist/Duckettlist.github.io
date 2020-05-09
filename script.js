@@ -67,7 +67,7 @@ function share()
 {
    passlist();
 }
-//Copy URL Week 14
+//Copy URL
 function copyToClipboard(text) {
   var passbyurl = document.createElement("textarea");
   passbyurl.value = text;
