@@ -8,6 +8,8 @@ img
    margin-left: auto;
    margin-right: auto;   
 }
+
+
 a:link {
     color: white;
 }
@@ -39,7 +41,7 @@ label {
     text-indent: 5px;
 }
 #wrapper {
-    width: 800px;
+    width: 500px;
     margin:20px auto;
     padding:20px;
     border-radius: 5px 5px 0 0;
