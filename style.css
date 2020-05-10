@@ -2,12 +2,19 @@
     outline: none;
 }
 
-img 
+img .flleft
+{
+    float: left;
+}    
+    
+
+
+/*img 
 {
    display: block;
    margin-left: auto;
    margin-right: auto;   
-}
+}*/
 
 
 a:link {
