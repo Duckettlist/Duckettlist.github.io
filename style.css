@@ -193,5 +193,5 @@ form a.delete:active {
 }  
 .clear
 {
-    clear: both;
+    clear: right;
 }    
