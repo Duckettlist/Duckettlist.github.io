@@ -6,7 +6,7 @@
 
 //v3.4 Add popup describing app when visitors load webpage the first time
 window.onload = function() {
-    alert("Welcome to 'Home Improvement Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n** Home Repair List **\nUse app by entering an item in the item box\nClick on  the +add button\nThere you will see the item you have entered\nBy clicking the check box, the item will be moved to the Purchased section.\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu");
+    alert("Welcome to 'Home Improvement Shopping List' App!\n\nCreated by Wesley K Duckett Jr.\n** Home Repair List **\nUse app by entering an item in the item box\nClick on  the +add button\nThere you will see the item you have entered\n\nQuestions?\nemail Wesley K Duckett Jr.\ns0375395@student.rockvalleycollege.edu");
     populateshoppinglistonload();
     displayShoppinglists();
     clearFocus();
