@@ -190,4 +190,8 @@ form a.delete:active {
 {
     float: right;
     clear: both;
+}  
+.clear
+{
+    clear: both;
 }    
