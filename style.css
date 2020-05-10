@@ -191,20 +191,3 @@ form a.delete:active {
     float: right;
     clear: both;
 }  
-.clear
-{
-    clear: right;
-}  
-
-.column {
-  float: left;
-  width: 10%;
-  padding: 5px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
