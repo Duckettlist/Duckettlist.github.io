@@ -189,4 +189,5 @@ form a.delete:active {
 .homedepot_logo
 {
     float: right;
+    clear: both;
 }    
